@@ -58,6 +58,7 @@ class OpenIDConnectClientTest extends TestCase
 
         $_SERVER['SERVER_NAME'] = 'domain.test';
         $_SERVER['REQUEST_URI'] = '/path/index.php?foo=bar&baz#fragment';
+        $_SERVER['SERVER_PORT'] = '80';
         self::assertSame('http://domain.test/path/index.php', $client->getRedirectURL());
     }
 
